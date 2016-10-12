@@ -3,6 +3,8 @@ window.onload = function(){
 
 var canvas = document.getElementById("the-canvas");
 var context = canvas.getContext("2d");
+var textarea = document.getElementById("code");
+var code = textarea.value;
 
 
 var W = window.innerWidth;
@@ -33,6 +35,9 @@ function draw(){
 	}
 	context.fill();
 	update();
+	context.font = '64px Helvetica';
+	context.fillStyle = '#eee';
+	context.fillText('Hello World', 570, 400)
 }
 
 var angle = 0;
